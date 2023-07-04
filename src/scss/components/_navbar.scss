@@ -1,0 +1,25 @@
+.header {
+    padding: 2.25rem 1.62rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo a{
+        color: hsl(0, 0%, 0%);
+    }
+    &__nav__ul{
+        list-style: none;
+        display: flex;
+        gap: 0.8rem;
+        
+        a {
+            color: hsl(0, 0%, 30%);
+            padding-bottom: 2px;
+            transition: .4s;
+            border-bottom: 2px solid transparent;
+            &:hover  {
+                border-bottom: 2px solid hsl(0, 0%, 30%);;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.main__vans {
+    padding: 1.68rem;
+
+    &__titile {
+        color: #161616;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    &__container {
+        margin-top: 3.9rem;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(14.7rem, 1fr));
+        row-gap: 1.87rem;
+        column-gap: 2rem;
+    }
+}

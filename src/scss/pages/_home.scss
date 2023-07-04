@@ -1,0 +1,33 @@
+.main__home {
+    padding: 2.25rem 1.62rem;
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.46) 0%, rgba(0, 0, 0, 0.46) 100%),url('/image54.png');
+    height: 503px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__content {
+        &__title {
+            color: hsl(0, 0%, 100%);
+            font-size: 2.25rem;
+            line-height: 2.625rem;
+            font-weight: 800;
+        }
+        &__info {
+            color: hsl(0, 0%, 100%);
+            font-weight: 500;
+            margin-top: 1.41rem;
+        }
+        &__link {
+            font-weight: 700;
+            background: hsl(25, 100%, 61%);
+            display: block;
+            text-align: center;
+            padding: 0.56rem 0;
+            border-radius: 5px;
+            margin-top: 3.23rem;
+            color: hsl(0, 0%, 100%);
+        }
+    }
+}

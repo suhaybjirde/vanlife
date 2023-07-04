@@ -1,0 +1,48 @@
+.main__about {
+
+    &__content {
+        padding: 2.25rem 1.62rem;
+
+        &__title {
+            color: #161616;
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 2.375rem;
+        }
+
+        &__info{
+            margin-top: 1.9rem;
+            &__text {
+                color: #161616;
+                font-size: 1rem;
+                font-weight: 500;  
+            }
+        }
+
+        &__focus {
+            margin-top: 3.44rem;
+            padding: 2.31rem;
+            border-radius: 5px;
+            background-color: hsl(33, 100%, 78%);
+
+            &__title {
+                color: #161616;
+                font-size: 1.5rem;
+                font-weight: 700;
+                line-height: 1.875rem;
+                max-width: 370px;
+            }
+
+            &__cta {
+                border-radius: 0.625rem;
+                background: hsl(0, 0%, 9%);
+                text-align: center;
+                padding: 0.7rem 1.38rem;
+                font-weight: 700;
+                display: inline-block;
+                margin-top: 1.56rem;
+                color: hsl(0, 0%, 100%);
+            }
+        }
+    }
+}

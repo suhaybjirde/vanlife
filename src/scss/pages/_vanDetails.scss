@@ -1,0 +1,89 @@
+.main__vanDetails {
+    padding: 0 1.68rem;
+
+    &__vansLink {
+        gap: 5px;
+        color: hsl(0, 0%, 30%);
+        font-size: 0.99663rem;
+        font-weight: 500;
+        
+        span {
+            border-bottom: 1px solid hsl(0, 0%, 30%);
+        }
+
+        img {
+            display: inline;
+        }
+    }
+
+    &__content {
+        margin-top: 2.55rem;
+
+        &__img {
+            height: 32rem;
+            width: 100%;
+            object-fit: cover;
+            display: block;
+            margin-inline: auto;
+            border-radius: 5px;
+        }
+
+        &__info {
+            margin-top: 3rem;
+
+            &__type {
+                text-align: center;
+                font-size: 1rem;
+                font-weight: 600;
+                line-height: 1.97888rem;
+                border-radius: 5px;
+                color: #FFEAD0;
+                display: inline-block;
+                padding: 0.15rem 0.87rem;
+
+                &.simple {
+                    background-color: hsl(14, 70%, 61%);
+                }
+                &.rugged {
+                    background-color: hsl(176, 69%, 22%);
+                }
+                &.luxury {
+                    background-color: hsl(0, 0%, 9%);
+                }
+            }
+
+            &__name {
+                margin-top: 1.4rem;
+                color: hsl(0, 0%, 9%);
+                font-size: 2rem;
+                font-weight: 700;
+            }
+            &__price {
+                margin-top: 0.6rem;
+                font-weight: 700;
+
+                span {
+                    font-weight: 500;
+                    font-size: 1rem;
+                }
+            }
+            &__description {
+                margin-top: 1.6rem;
+                color: hsl(0, 0%, 9%);
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 1.49494rem;
+            }
+            &__cta {
+                margin-top: 1.3rem;
+                display: block;
+                border-radius: 0.31144rem;
+                background: #FF8C38;
+                text-align: center;
+                color: #FFEAD0;
+                padding: 0.6rem 0;
+                margin-bottom: 5rem;
+            }
+        }
+    }
+}

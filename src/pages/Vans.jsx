@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Van = ({img, name, price, type, id})=> (
     <div className='van'>
@@ -10,7 +11,7 @@ const Van = ({img, name, price, type, id})=> (
                 <h2 className="van__info__name">{name}</h2>
                 <h3 className="van__info__price">{price} <span>/day</span></h3>
             </div>
-            <Link>{type}</Link>
+            <Link className={`van__info__link ${type}`}>{type}</Link>
         </Link>
     </div>
 )
@@ -35,10 +36,13 @@ const Vans = ()=> {
     return (
         <>
             <Navbar />
-            <main>
-                <h1>Explore our van options</h1>
-                {VanElements}
+            <main className="main__vans">
+                <h1 className="main__vans__title">Explore our van options</h1>
+                <div className="main__vans__container">
+                    {VanElements}
+                </div>
             </main>
+            <Footer />
         </>
     )
 

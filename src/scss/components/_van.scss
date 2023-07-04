@@ -1,0 +1,55 @@
+.van {
+    width: 15.8rem;
+    &__img {
+        border-radius: 5px;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.6rem;
+        &__name {
+            color: #161616;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        &__price {
+            color: #161616;
+            font-size: 1.25rem;
+            font-weight: 600;
+            position: relative;
+
+            span {
+                color: #161616;
+                font-size: 0.86rem;
+                font-weight: 500;
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+            }
+        }
+
+        &__link {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.97888rem;
+            border-radius: 5px;
+            color: #FFEAD0;
+            display: inline-block;
+            padding: 0.15rem 0.87rem;
+            margin: 0.3rem 0;
+
+            &.simple {
+                background-color: hsl(14, 70%, 61%);
+            }
+            &.rugged {
+                background-color: hsl(176, 69%, 22%);
+            }
+            &.luxury {
+                background-color: hsl(0, 0%, 9%);
+            }
+        }
+    }
+}

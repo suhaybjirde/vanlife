@@ -8,11 +8,15 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     font-family: 'Inter', sans-serif;
+    background: hsl(33, 100%, 96%);
 }
 
 img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
+}
+a {
+    text-decoration: none;
 }
 
 input, button, textarea, select {
@@ -25,4 +29,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
 #root, #__next {
     isolation: isolate;
+    max-width: 40rem;
+    width: 80%;
+    margin-inline: auto;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
 }
