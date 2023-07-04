@@ -1,12 +1,9 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import img from '/image55.png'
 import { Link } from "react-router-dom";
 
 const About = ()=> (
     <>
-        <Navbar />
         <main className="main__about">
             <img src={img} alt="" />
             <div className="main__about__content">
@@ -22,7 +19,6 @@ const About = ()=> (
                 </div>
             </div>
         </main>
-        <Footer />
     </>
 )
 export default About

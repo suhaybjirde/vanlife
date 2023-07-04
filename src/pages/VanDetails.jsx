@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from '../components/Footer'
 import arrow from '/Arrow.png' 
 const VansDetails = ()=> {
     const [van, setVan] = useState(null)
@@ -14,7 +12,6 @@ const VansDetails = ()=> {
     console.log(van) 
     return (
         <>
-            <Navbar />
             <main className="main__vanDetails">
                 <Link to='/vans' className="main__vanDetails__vansLink"><img src={arrow} alt="" /> <span>Back to all vans</span></Link>
                 {
@@ -32,7 +29,6 @@ const VansDetails = ()=> {
                     <h2>Loading......</h2>
                 }
             </main>
-            <Footer />
         </>
     )
 }
