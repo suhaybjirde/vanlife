@@ -18,7 +18,12 @@
             transition: .4s;
             border-bottom: 2px solid transparent;
             &:hover  {
-                border-bottom: 2px solid hsl(0, 0%, 30%);;
+                border-bottom: 2px solid hsl(0, 0%, 30%);
+            }
+            &.active {
+                border-bottom: 2px solid hsl(0, 0%, 9%);
+                color: hsl(0, 0%, 9%);
+                font-weight: 700;
             }
         }
     }
