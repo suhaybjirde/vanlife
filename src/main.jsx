@@ -12,6 +12,7 @@ import Reviews from './pages/Hosts/Reviews'
 import HostVan from './pages/Hosts/HostVan'
 import Dashboard from './pages/Hosts/Dashboard';
 import HostVanDetail from './pages/Hosts/HostVanDetail';
+import {Details, Pricing, Photos} from './pages/Hosts/HostVanInfo';
 import './scss/main.scss'
 import "../server"
 
@@ -29,7 +30,11 @@ root.render(
           <Route path='income' element={<Income />}/>
           <Route path='reviews' element={<Reviews />}/>
           <Route path='vans' element={<HostVan />}/>
-          <Route path='vans/:id' element={<HostVanDetail />}/>
+          <Route path='vans/:id' element={<HostVanDetail />}>
+            <Route index element={<Details />} />
+            <Route path='pricing' element={<Pricing />} />
+            <Route path='photos' element={<Photos />} />
+          </Route>
         </Route>
       </Route>
     </Routes>

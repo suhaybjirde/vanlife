@@ -9,7 +9,6 @@ const VansDetails = ()=> {
             .then(res => res.json())
             .then(data => setVan(data.vans))
     }, [])
-    console.log(van) 
     return (
         <>
             <main className="main__vanDetails">

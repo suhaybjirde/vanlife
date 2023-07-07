@@ -22,10 +22,10 @@ const HostNav = ()=> (
 
 const HostLayout = ()=> {
     return (
-        <>
+        <main>
             <HostNav />
             <Outlet />
-        </>
+        </main>
     )
 }
 

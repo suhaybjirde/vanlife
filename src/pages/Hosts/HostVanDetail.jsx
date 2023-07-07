@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from "react";
-import { useParams, Link, NavLink } from "react-router-dom";
+import { useParams, Link, NavLink, Outlet } from "react-router-dom";
 import arrow from '/Arrow.png' 
 
 const Van = ({ van })=> {
@@ -14,13 +14,26 @@ const Van = ({ van })=> {
             </div>
             <ul>
                 <li>
-                    <NavLink>Details</NavLink>
+                    <NavLink
+                        to='.'
+                        end
+                    >
+                    Details
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink>Pricing</NavLink>
+                    <NavLink
+                        to='pricing'
+                    >
+                    Pricing
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink>Photos</NavLink>
+                    <NavLink
+                        to='photos'
+                    >
+                    Photos
+                    </NavLink>
                 </li>
             </ul>
         </article>
@@ -49,6 +62,7 @@ const HostVanDetail = ()=> {
                     <img src={arrow} alt=""/> <span>Back to all vans</span>
             </Link>
             <Van van={data}/>
+            <Outlet context={{ data }}/>
         </section>
     )
 }

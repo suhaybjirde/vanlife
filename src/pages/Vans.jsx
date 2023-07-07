@@ -9,7 +9,7 @@ const Van = ({img, name, price, type, id})=> (
                 <h2 className="van__info__name">{name}</h2>
                 <h3 className="van__info__price">{price} <span>/day</span></h3>
             </div>
-            <Link className={`van__info__link ${type}`}>{type}</Link>
+            <p className={`van__info__link ${type}`}>{type}</p>
         </Link>
     </div>
 )
