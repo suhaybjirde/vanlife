@@ -1,0 +1,46 @@
+.host-vans {
+    padding: 0 1.62rem;
+    margin-top: 3.4rem;
+    margin-bottom: 4rem;
+
+    &__title {
+        color: hsl(0, 0%, 9%);
+        font-size: 2.1rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    
+    &__item {
+        background-color: hsl(0, 0%, 100%);
+        display: block;
+        margin-top: 0.9rem;
+        border-radius: 5px;
+
+        &__van {
+            display: flex;
+            padding: 1rem 1.4rem;
+            gap: 1rem;
+            align-items: center;
+
+            &__img {
+                width: 5rem;
+                border-radius: 5px;
+            }
+
+            &__info {
+
+                &__name {
+                    color: hsl(0, 0%, 9%);
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                }
+
+                &__price {
+                    color: hsl(0, 0%, 30%);
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
