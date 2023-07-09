@@ -1,0 +1,101 @@
+.host-van-detail {
+    margin: 3.7rem 0;
+    padding: 0 1.62rem;
+
+    &__back-link {
+        gap: 5px;
+        color: hsl(0, 0%, 9%);
+        font-size: 0.99663rem;
+        font-weight: 500;
+        
+        span {
+            border-bottom: 1px solid hsl(0, 0%, 9%);
+        }
+
+        img {
+            display: inline;
+        }
+    }
+
+    .container {
+        background-color: hsl(0, 0%, 100%);
+        padding: 1.5rem;
+        border-radius: 6px;
+        margin-top: 3rem;
+    }
+    &__van {
+        &__header {
+            display: flex;
+            gap: 1.3rem;
+            align-items: center;
+
+            &__img {
+                width: 10rem;
+                border-radius: 5px;
+            }
+            &__info {
+                &__type {
+                    text-align: center;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    line-height: 1.97888rem;
+                    border-radius: 5px;
+                    color: #FFEAD0;
+                    display: inline-block;
+                    padding: 0.15rem 0.87rem;
+                    margin: 0.3rem 0;
+
+                    &.simple {
+                        background-color: hsl(14, 70%, 61%);
+                    }
+                    &.rugged {
+                        background-color: hsl(176, 69%, 22%);
+                    }
+                    &.luxury {
+                        background-color: hsl(0, 0%, 9%);
+                    }
+                }
+
+                &__name {
+                    color: hsl(0, 0%, 9%);
+                    font-size: 1.7rem;
+                    font-weight: 700;
+                }
+                &__price {
+                    color: #161616;
+                    font-size: 1.1rem;
+                    font-weight: 700;
+
+                    span {
+                        color: hsl(0, 0%, 30%);
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+
+        &__nav-list {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.6rem;
+            &__item {
+                a {
+                    color: hsl(0, 0%, 30%);
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    transition: .4s;
+                    border-bottom: 2px solid transparent;
+                    padding-bottom: 2px;
+                    &.active {
+                        font-weight: 700;
+                        color: hsl(0, 0%, 9%);
+                        border-bottom: 2px solid hsl(0, 0%, 9%);
+                    }
+                }
+            }
+        }
+    }
+
+}
