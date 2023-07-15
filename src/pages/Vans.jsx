@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 
-const Van = ({img, name, price, type, id})=> (
+const Van = ({img, name, price, type, id, state, sortedby})=> (
     <div className='van'>
-        <Link to={id}>
+        <Link to={id} state={{search: `?${state}`, type: sortedby}}>
             <img src={img} alt="" className="van__img"/>
             <div className="van__info">
                 <h2 className="van__info__name">{name}</h2>
@@ -32,6 +32,8 @@ const Vans = ()=> {
         <Van 
             key={item.id}
             id={item.id}
+            sortedby={typeFilter}
+            state={searchParams.toString()}
             img={item.imageUrl} 
             name={item.name}
             price={item.price}

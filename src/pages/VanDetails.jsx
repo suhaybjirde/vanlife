@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 import arrow from '/Arrow.png' 
 const VansDetails = ()=> {
     const [van, setVan] = useState(null)
     const {id} = useParams()
+    const params = useLocation()
     useEffect(()=> {
         fetch(`/api/vans/${id}`)
             .then(res => res.json())
             .then(data => setVan(data.vans))
     }, [])
+
+    const backTo = params.state?.search || ''
+    const type = params.state?.type || 'all'
     return (
         <>
             <main className="main__vanDetails">
-                <Link to='/vans' className="main__vanDetails__vansLink"><img src={arrow} alt="" /> <span>Back to all vans</span></Link>
+                <Link to={`..${backTo}`} relative="path" className="main__vanDetails__vansLink"><img src={arrow} alt="" /> <span>Back to {type} vans</span></Link>
                 {
                     van ? 
                     <div className="main__vanDetails__content">
