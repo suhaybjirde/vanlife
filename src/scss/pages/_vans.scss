@@ -6,6 +6,54 @@
         font-size: 2rem;
         font-weight: 700;
     }
+
+    &__nav {
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: baseline;
+        list-style: none;
+        gap: 1.3rem;
+
+        &__item__filter {
+            background-color: hsl(33, 100%, 91%);
+            border: none;
+            padding: 0.4rem 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: hsl(0, 0%, 30%);
+            transition: .4s;
+
+            &.simple{
+                &.selected, &:hover{
+                    background-color: hsl(14, 70%, 61%);
+                    color: hsl(33, 100%, 91%);
+                }
+            }
+            &.luxury {
+                &.selected, &:hover{
+                    background-color: hsl(0, 0%, 9%);
+                    color: hsl(33, 100%, 91%);
+                }
+            }
+            &.rugged{
+                &.selected, &:hover{
+                    background-color: hsl(176, 69%, 22%);
+                    color: hsl(33, 100%, 91%);
+                }
+            }
+        }
+
+        &__item__clear {
+            border: none;
+            border-bottom: 1px solid hsl(0, 0%, 30%);
+            background-color: transparent;
+            cursor: pointer;
+            color: hsl(0, 0%, 30%);
+        }
+    }
+
     &__container {
         margin-top: 3.9rem;
         display: grid;
