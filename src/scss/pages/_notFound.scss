@@ -1,0 +1,24 @@
+.main__404 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    padding: 0 1.6rem;
+    h1 {
+        color: hsl(0, 0%, 9%);
+        font-size: 2.1rem;
+        font-weight: 700;
+        line-height: 2.6rem;
+    }
+    a {
+        border-radius: 0.32rem;
+        background: hsl(0, 0%, 9%);
+        display: block;
+        margin-top: 2rem;
+        padding: 1rem 0;
+        color: #FFF;
+        text-align: center;
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+}

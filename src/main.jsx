@@ -13,6 +13,7 @@ import HostVan from './pages/Hosts/HostVan'
 import Dashboard from './pages/Hosts/Dashboard';
 import HostVanDetail from './pages/Hosts/HostVanDetail';
 import {Details, Pricing, Photos} from './pages/Hosts/HostVanInfo';
+import NotFound from './pages/NotFound';
 import './scss/main.scss'
 import "../server"
 
@@ -36,6 +37,7 @@ root.render(
             <Route path='photos' element={<Photos />} />
           </Route>
         </Route>
+        <Route path='*' element={<NotFound />}/>
       </Route>
     </Routes>
   </BrowserRouter>
