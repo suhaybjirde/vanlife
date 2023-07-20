@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import React from "react";
+import { Link, useSearchParams, useLoaderData } from "react-router-dom";
 import { getVans } from '../../api'
+
+export function loader() {
+    return getVans()
+}
 
 const Van = ({img, name, price, type, id, state, sortedby})=> (
     <div className='van'>
@@ -15,25 +19,15 @@ const Van = ({img, name, price, type, id, state, sortedby})=> (
     </div>
 )
 const Vans = ()=> {
-    const [vans, setVans] = useState(()=> [])
     const [searchParams, setSearchParams] = useSearchParams()
     const typeFilter = searchParams.get('type')
+    
+    const vans = useLoaderData()
 
     const sortedVan = typeFilter 
         ? vans.filter(vans => vans.type.toLowerCase() === typeFilter)
         : vans
 
-    useEffect(()=> {
-        async function loadData() {
-            try{
-                const data = await getVans()
-                setVans(data)
-            } catch (e) {
-                console.log(e)
-            }
-        }
-        loadData()
-    }, [])
 
     const VanElements = sortedVan.map(item => (
         <Van 

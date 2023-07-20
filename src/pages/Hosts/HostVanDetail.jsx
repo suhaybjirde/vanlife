@@ -1,8 +1,10 @@
-import React, { useState, useEffect} from "react";
-import { useParams, Link, NavLink, Outlet } from "react-router-dom";
+import React from "react";
+import { Link, NavLink, Outlet, useLoaderData} from "react-router-dom";
 import arrow from '/Arrow.png' 
 import { getHostVans } from '../../../api'
-
+export function loader({ params: { id } }) {
+    return getHostVans(id)
+}
 const Van = ({ van })=> {
     return(
         <article className="host-van-detail__van">
@@ -46,21 +48,9 @@ const Van = ({ van })=> {
 }
 
 const HostVanDetail = ()=> {
-    const [data, setData] = useState(null)
-    const { id } = useParams()
 
-    useEffect(()=> {
-        async function loadData() {
-            try{
-                const vansData = await getHostVans(id)
-                setData(vansData)
-            } catch (e) {
-                console.log(e)
-            }
-        }
-        loadData()
-    }, [])
-    if (!data) return
+    const data = useLoaderData()
+
     return (
         <section className="host-van-detail">
             <Link 
