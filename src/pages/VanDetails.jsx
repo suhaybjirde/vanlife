@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link, useLocation } from "react-router-dom";
 import arrow from '/Arrow.png' 
+import { getVans } from '../../api'
+
 const VansDetails = ()=> {
     const [van, setVan] = useState(null)
     const {id} = useParams()
     const params = useLocation()
+
     useEffect(()=> {
-        fetch(`/api/vans/${id}`)
-            .then(res => res.json())
-            .then(data => setVan(data.vans))
+        async function loadData() {
+            try{
+                const data = await getVans(id)
+                setVan(data)
+            } catch (e) {
+                console.log(e)
+            }
+        }
+        loadData()
     }, [])
 
     const backTo = params.state?.search || ''

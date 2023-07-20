@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import { getHostVans } from '../../../api'
+
 const HostVan = ()=> {
     const [data, setData] = useState(null)
     
     useEffect(()=> {
-        async function getData() {
-            const res = await fetch('/api/host/vans');
-            const actualData = await res.json()
-            setData(actualData.vans)
+        async function loadData() {
+            try{
+                const vansData = await getHostVans()
+                setData(vansData)
+            } catch (e) {
+                console.log(e)
+            }
         }
-        getData()
-    },[])
+        loadData()
+    }, [])
     if (!data) return
     const vans = data.map(van => (
         <Link 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
+import { getVans } from '../../api'
 
 const Van = ({img, name, price, type, id, state, sortedby})=> (
     <div className='van'>
@@ -23,9 +24,15 @@ const Vans = ()=> {
         : vans
 
     useEffect(()=> {
-        fetch("/api/vans")
-        .then(res => res.json())
-        .then(data => setVans(data.vans))
+        async function loadData() {
+            try{
+                const data = await getVans()
+                setVans(data)
+            } catch (e) {
+                console.log(e)
+            }
+        }
+        loadData()
     }, [])
 
     const VanElements = sortedVan.map(item => (

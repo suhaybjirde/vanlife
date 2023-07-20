@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from "react";
 import { useParams, Link, NavLink, Outlet } from "react-router-dom";
 import arrow from '/Arrow.png' 
+import { getHostVans } from '../../../api'
 
 const Van = ({ van })=> {
     return(
@@ -47,14 +48,18 @@ const Van = ({ van })=> {
 const HostVanDetail = ()=> {
     const [data, setData] = useState(null)
     const { id } = useParams()
+
     useEffect(()=> {
-        async function getData() {
-            const res = await fetch(`/api/host/vans/${id}`);
-            const actualData = await res.json()
-            setData(actualData.vans)
+        async function loadData() {
+            try{
+                const vansData = await getHostVans(id)
+                setData(vansData)
+            } catch (e) {
+                console.log(e)
+            }
         }
-        getData()
-    },[])
+        loadData()
+    }, [])
     if (!data) return
     return (
         <section className="host-van-detail">
