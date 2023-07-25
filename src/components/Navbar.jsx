@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import logo from '../assets/login.png'
 
 const Navbar = ()=> (
     <header className="header">
@@ -9,6 +10,7 @@ const Navbar = ()=> (
                 <li className="header__nav__ul_link"><NavLink to='/host' className={({isActive}) => isActive ? 'active' : null}>Host</NavLink></li>
                 <li className="header__nav__ul_link"><NavLink to='/about' className={({isActive}) => isActive ? 'active' : null}>About</NavLink></li>
                 <li className="header__nav__ul_link"><NavLink to='/vans' className={({isActive}) => isActive ? 'active' : null}>Vans</NavLink></li>
+                <li className="header__nav__ul_link"><NavLink to='/login' className='login'><img src={logo} alt=""/></NavLink></li>
             </ul>
         </nav>
     </header>

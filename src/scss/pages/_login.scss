@@ -1,0 +1,58 @@
+.main__login {
+    margin-top: 3rem;
+    padding-inline: 1.7rem;
+    &__title {
+        color: #161616;
+        text-align: center;
+        font-size: 2.3rem;
+        font-weight: 700;
+    }
+    &__form {
+        margin-top: 3rem;
+
+        &__input {
+            display: block;
+            width: 100%;
+            padding: 0.6rem 0.9rem;
+            background-color: hsl(0, 0%, 100%);
+            box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+            border: 1px solid hsl(0, 0%, 80%);
+            color: hsl(0, 0%, 30%);
+            &:focus {
+                outline: none;
+            }
+            &.email {
+                border-radius: 5px 5px 0 0;
+                border-bottom: 0;
+            }
+            &.password {
+                border-radius: 0 0 5px 5px;
+            }
+        }
+
+        &__submit-btn {
+            display: block;
+            width: 100%;
+            margin-top: 1.4rem;
+            padding: 0.7rem;
+            text-align: center;
+            font-weight: 500;
+            background-color: hsl(25, 100%, 61%);
+            color: hsl(0, 0%, 100%);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+    &__create-account {
+        margin-top: 3rem;
+        margin-bottom: 4.5rem;
+        text-align: center;
+        color: hsl(0, 0%, 9%);
+        font-weight: 500;
+
+        a {
+            color: hsl(25, 100%, 61%);
+        }
+    }
+}

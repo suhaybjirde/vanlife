@@ -20,6 +20,7 @@ import HostVanDetail, { loader as hostVansDetailLoader} from './pages/Hosts/Host
 import {Details, Pricing, Photos} from './pages/Hosts/HostVanInfo';
 import NotFound from './pages/NotFound';
 import Error from './components/Error';
+import Login from './pages/Login';
 import './scss/main.scss'
 import "../server"
 
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
     <Route path='/' element={<Layout />}>
       <Route index element={<Home />}/>
       <Route path='about' element={<About />} />
+      <Route path='login' element={<Login />}/>
       <Route 
         path='vans' 
         loader={vansLoader} 

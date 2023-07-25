@@ -10,13 +10,15 @@
     &__nav__ul{
         list-style: none;
         display: flex;
-        gap: 0.8rem;
+        align-items: center;
+        gap: 1.3rem;
         
         a {
             color: hsl(0, 0%, 30%);
             padding-bottom: 2px;
             transition: .4s;
             border-bottom: 2px solid transparent;
+            flex: 1;
             &:hover  {
                 border-bottom: 2px solid hsl(0, 0%, 30%);
             }
@@ -24,6 +26,15 @@
                 border-bottom: 2px solid hsl(0, 0%, 9%);
                 color: hsl(0, 0%, 9%);
                 font-weight: 700;
+            }
+            &.login {
+                background-color: red;
+                img {
+                    width: 1.4rem;
+                    height: 1.4rem;
+                    object-fit: contain;
+
+                }
             }
         }
     }
