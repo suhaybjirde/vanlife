@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLoaderData, useLocation } from "react-router-dom";
 import arrow from '/Arrow.png' 
-import { getVans } from '../../api'
+import { getVans } from '../utils/api'
 
 export function loader({ params: { id } }) {
     return getVans(id)
