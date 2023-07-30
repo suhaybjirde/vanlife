@@ -1,10 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
+
+export function loader( { request }) {
+    const url = new URL(request.url)
+    return url.searchParams.get('message')
+}
 
 const Login = ()=> {
+    const message = useLoaderData()
     return (
         <main className="main__login">
             <h1 className="main__login__title">Sign in to your account</h1>
+            {message && <h3 className="main__login__red">You must log in first.</h3>}
             <form action=""  className="main__login__form">
                 <input type="text" name="" id="" placeholder="Email address" className="main__login__form__input email"/>
                 <input type="password" name="" id="" placeholder="Password" className="main__login__form__input password"/>
