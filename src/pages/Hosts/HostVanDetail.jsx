@@ -2,7 +2,9 @@ import React from "react";
 import { Link, NavLink, Outlet, useLoaderData} from "react-router-dom";
 import arrow from '/Arrow.png' 
 import { getHostVans } from '../../../api'
-export function loader({ params: { id } }) {
+import { requireAuth } from '../../utils/autho'
+export async function loader({ params: { id } }) {
+    await requireAuth()
     return getHostVans(id)
 }
 const Van = ({ van })=> {
