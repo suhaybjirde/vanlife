@@ -14,7 +14,8 @@ export async function action({ request }) {
     try {
         const data = await loginUser({email, password})
         localStorage.setItem('loggedin', true)
-        const rediretTo = redirect('/host')
+        const pathname = new URL(request.url).searchParams.get('redirect') || '/host'
+        const rediretTo = redirect(pathname)
         rediretTo.body = true
         return rediretTo
     } catch (error) {
